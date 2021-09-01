@@ -21,20 +21,32 @@ public class StackMain {
                     flag = true;
                     break;
                 case 2:
-                    stackOperation.disply();
+                    stackOperation.pop();
                     flag = true;
                     break;
                 case 3:
+                    System.out.printf("Top Element: %d ", stackOperation.peek());
+                    System.out.println();
+                    flag = true;
+                    break;
+                case 4:
+                    stackOperation.disply();
+                    flag = true;
+                    break;
+                case 5:
                     flag = false;
                     break;
+
             }
         }
     }
 
     private static int userMenu() {
         System.out.println("Press 1 to Insert");
-        System.out.println("Press 2 to Display");
-        System.out.println("Press 3 to Quit");
+        System.out.println("Press 2 to Pop");
+        System.out.println("Press 3 to Peek");
+        System.out.println("Press 4 to Display");
+        System.out.println("Press 5 to Quit");
 
         int choice = input.nextInt();
         return choice;

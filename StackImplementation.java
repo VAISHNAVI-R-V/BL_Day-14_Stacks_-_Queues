@@ -18,6 +18,26 @@ class StackImplementation {
         }
     }
 
+    void pop() {
+        if (top == null)
+            System.out.println("\n" + "Stack is Empty!");
+        else {
+            Node temp = top;
+            System.out.printf("Deleted element: %d", temp.data);
+            System.out.println();
+            top = temp.next;
+        }
+    }
+
+    public int peek() {
+        if (top != null)
+            return top.data;
+        else {
+            System.out.println("Stack is empty");
+            return -1;
+        }
+    }
+
     public void disply() {
         if (top == null)
             System.out.println("Stack is empty");
