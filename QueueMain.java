@@ -11,9 +11,9 @@ public class QueueMain {
 
         boolean flag = true;
 
-        while(flag) {
+        while (flag) {
             int choice = userMenu();
-            switch(choice) {
+            switch (choice) {
                 case 1:
                     System.out.print("Enter the element you want to insert to the stack: ");
                     int element = input.nextInt();
@@ -21,25 +21,20 @@ public class QueueMain {
                     flag = true;
                     break;
                 case 2:
-                    queueOperation.dequeue();
-                    flag = true;
-                    break;
-                case 3:
                     queueOperation.display();
                     flag = true;
                     break;
-                case 4:
+                case 3:
                     flag = false;
                     break;
             }
         }
     }
 
-    public static int userMenu () {
-        System.out.println("Press 1 to Enqueue");
-        System.out.println("Press 2 to Dequeue");
-        System.out.println("Press 3 to Display");
-        System.out.println("Press 4 to Quit");
+    public static int userMenu() {
+        System.out.println("Press 1 to Insert");
+        System.out.println("Press 2 to Display");
+        System.out.println("Press 3 to Quit");
 
         int choice = input.nextInt();
 
